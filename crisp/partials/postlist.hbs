@@ -1,17 +1,25 @@
 {{#foreach posts}}
 	{{#if @first}}
-		<section id="{{id}}" class="{{post_class}}">
-			<h2 class="post-title"><a href="{{url}}">{{title}}</a>
-<small><span class="separator"> &middot; </span>{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span><span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>	
-			</small></h2>	
 
-			{{excerpt}}<a href="{{url}}">...</a>
-		</section>
+		<section id="{{id}}" class="{{post_class}}">
+		<div>
+			<img src="{{image}}" style="float: left; margin-right: 20px; width: 80px; height: 80px" />
+						<h2 class="post-title"><a href="{{url}}">{{title}}</a>
+	<small><span class="separator"> &middot; </span>{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span><span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>	
+				</small></h2>	
+
+				{{excerpt}}<a href="{{url}}">...</a>
+			</section>
+		</div>
+
 		</br>
 	{{else}}
 		<section id="{{id}}" class="{{post_class}}">
+		<div>
+			<img src="{{image}}" style="float: left; margin-right: 20px; width: 80px; height: 80px" />
 			<h3 class="post-title"><a href="{{url}}">{{title}}</a><span class="separator"> &middot; </span>{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>{{#if featured}}<span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>{{/if}}		
 			</h3>	
+			</div>
 		</section>
 	{{/if}}
 {{/foreach}}
