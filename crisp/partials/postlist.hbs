@@ -3,10 +3,11 @@
 		<section id="{{id}}" class="{{post_class}}">
 			<h2 class="post-title"><a href="{{url}}">{{title}}</a>
 <small><span class="separator"> &middot; </span>{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span><span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>	
-			</small></h4>	
+			</small></h2>	
 
 			{{excerpt}}<a href="{{url}}">...</a>
 		</section>
+		</br>
 	{{else}}
 		<section id="{{id}}" class="{{post_class}}">
 			<h3 class="post-title"><a href="{{url}}">{{title}}</a><span class="separator"> &middot; </span>{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>{{#if featured}}<span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>{{/if}}		
